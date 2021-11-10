@@ -2,9 +2,10 @@
 function dbConnect() {
     // Db connection
 const mongoose = require('mongoose')
-const url = 'mongodb://localhost/comments'
+const mongoURI = require('./config/monkoKEY.js');
 
-mongoose.createConnection(url, {
+
+mongoose.createConnection(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true
